@@ -4,5 +4,8 @@
     Todo: <%= @todo.name %>
 </p>
 <p>
-    How to do the todo: <%=  @todo.description %>
+    What Todo: <%=  @todo.description %>
 </p>
+
+<%= link_to 'Edit this Todo', edit_todo_path(@todo) %> |
+<%= link_to 'Back To Todo', todos_path %>
