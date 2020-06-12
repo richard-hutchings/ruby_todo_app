@@ -1,4 +1,5 @@
-<% if @todo.errors.any? %>
+<div class="error-page">
+          <% if @todo.errors.any? %>
     <h2>The following errors prevented the Todo from being saved.</h2>
     <ul>
         <% @todo.errors.full_messages.each do |msg| %>
@@ -6,9 +7,11 @@
         <% end %>
     </ul>
 <% end %>
+</div>
 
-<%= form_for @todo do |f|  %>
-    
+<div class="border-box">
+       <%= form_for @todo do |f|  %>
+<div class="todo-form">    
     <p>
         <%= f.label :todo  %> <br>
         <%= f.text_field :name %>
@@ -17,10 +20,14 @@
         <%= f.label :todo_description %> <br>
         <%= f.text_area :description %>
     </p>
-    <p>
-        <%= f.submit %>
+    <p class="submit-btn">
+         <%= f.submit %>
     </p>
+</div>
+    <% end %>
 
-<% end %>
+</div>
+<div>
+    <button class="todos-btn"><%= link_to 'Back To Todos', todos_path %></button>
 
-<%= link_to 'Back To Todos', todos_path %>
+</div>

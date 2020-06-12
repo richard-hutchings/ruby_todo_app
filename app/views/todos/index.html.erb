@@ -1,11 +1,13 @@
-<h1>This is your list of things to do.</h1>
-<h1> Better get too it!</h1><br>
+<div class="home">
+    <h2>This is your list of things to do.</h2>
+    <h2> Better get too it!</h2>
 
-<p>
-    <%= link_to 'Create Something Todo', new_todo_path %>
-</p> <br>
+   <p>
+   <button class="new-todo-btn"> <%= link_to 'Create Something Todo', new_todo_path %></button>
+   </p> <br>
 
-<table>
+<div class="table-div">
+    <table>
     <tr>
         <th>Todo</th>
         <th>What Todo</th>
@@ -14,9 +16,11 @@
     <tr>
         <td><%= todo.name %></td>
         <td><%= todo.description %></td>
-        <td><%= link_to 'Edit', edit_todo_path(todo) %></td>
-        <td><%= link_to 'Show', todo_path(todo) %></td>
-        <td><%= link_to 'Delete', todo_path(todo), method: :delete, data: {confirm: 'Are you sure?'} %></td>
+        <td><button class="index-btn"><%= link_to 'Edit', edit_todo_path(todo) %></button></td>
+        <td><button class="index-btn"><%= link_to 'Show', todo_path(todo) %></button></td>
+        <td><button class="index-btn"><%= link_to 'Delete', todo_path(todo), method: :delete, data: {confirm: 'Are you sure?'} %></button></td>
     </tr>
     <% end %>
 </table>
+</div>
+</div>
