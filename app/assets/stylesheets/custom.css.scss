@@ -14,6 +14,11 @@ h1 {
     text-shadow: 4px 4px 8px black ;
 }
 
+.text_field {
+     width: 400px;
+     height: 100px;
+}
+
 .new-todo {
     position: absolute;
     left: 42.5%;
@@ -123,14 +128,12 @@ h2 {
 }
 
 .submit-btn {
-    position: absolute;
     width: 170px;
     height: 40px;
     color: black;
     background-color: green;
     border-radius: 8px;
     font-family: 'Courgette', cursive;
-    left: 13%;
 }
 
 .current-todos {

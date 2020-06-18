@@ -8,25 +8,26 @@
     </ul>
 <% end %>
 </div>
-
-<div class="border-box">
-       <%= form_for @todo do |f|  %>
-<div class="todo-form">    
-    <p>
-        <%= f.label :todo  %> <br>
-        <%= f.text_field :name %>
-    </p>
-    <p>
-        <%= f.label :todo_description %> <br>
-        <%= f.text_area :description %>
-    </p>
-    <p class="submit-btn">
-         <%= f.submit %>
-    </p>
-</div>
-    <% end %>
-
-</div>
+   <div align="center">
+        <div class="form-group">
+           <%= form_for @todo do |f|  %>
+            <div class="todo-form">    
+                <p>
+                    <%= f.label :todo  %> <br>
+                    <%= f.text_field :name %>
+                </p>
+                <p>
+                    <%= f.label :todo_description %> <br>
+                    <%= f.text_area :description %>
+                </p>
+                     <p class="submit-btn">
+                         <%= f.submit %>
+                     </p>
+                
+            </div>
+        <% end %>
+    </div>
+   </div>
 <div>
     <button class="todos-btn"><%= link_to 'Back To Todos', todos_path %></button>
 
