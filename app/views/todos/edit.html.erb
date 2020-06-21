@@ -1,5 +1,8 @@
 <div class="edit">
     <h1 class="edit-heading">Edit an exisiting todo</h1>
 
-    <button><%= render 'form' %></button>
+      <%= render 'form' %>
+        <div align="center">
+            <button class="todos-btn"><%= link_to 'Back To Todos', todos_path %></button>
+        </div>
 </div>
